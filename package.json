@@ -1,0 +1,26 @@
+{
+  "name": "chat-application",
+  "version": "1.0.0",
+  "description": "A web application with features to create a chat room or join an existing chat room",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evilbuggy/chat-application.git"
+  },
+  "author": "evilbuggy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evilbuggy/chat-application/issues"
+  },
+  "homepage": "https://github.com/evilbuggy/chat-application#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "dotenv": "^6.0.0"
+  }
+}
