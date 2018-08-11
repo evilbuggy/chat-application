@@ -5,7 +5,7 @@ $(document).ready(function(){
     $("#btn").click(function(event){
         event.preventDefault();
         var handleName = $("#handleName").val();
-        if(/[^a-zA-Z]/.test(handleName)){
+        if(/[^a-zA-Z]/.test(handleName) || handleName == ""){
             $("#error").html("Error: The room name should contain alphabets only");
             $("#handleName").value = "";
         }else{

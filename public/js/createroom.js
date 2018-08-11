@@ -2,7 +2,7 @@ $(document).ready(function(){
     $("#btn").click(function(event){
         event.preventDefault();
         var roomName = $("#roomName").val();
-        if(/[^a-zA-Z0-9]/.test(roomName)){
+        if(/[^a-zA-Z0-9]/.test(roomName) || roomName == ""){
             $("#error").html("Error: The room name should only alphabets and numbers");
             $("#roomName").value = "";
         }else{
