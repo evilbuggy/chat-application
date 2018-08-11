@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGO_SERV);
+mongoose.connect(process.env.MONGO_SERV_EBCA);
 
 var roomSchema = mongoose.Schema({
     name:{

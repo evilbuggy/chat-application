@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const io = require("socket.io");
 const Room = require("./../models/room");
 
-mongoose.connect(process.env.MONGO_SERV);
+mongoose.connect(process.env.MONGO_SERV_EBCA);
 
 module.exports.createRoom = function(roomName, callBack){
     var newRoom = new Room({

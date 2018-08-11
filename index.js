@@ -7,7 +7,7 @@ const socket = require("socket.io");
 const Room = require("./models/room");
 const utils = require("./controllers/utils");
 
-mongoose.connect(process.env.MONGO_SERV);
+mongoose.connect(process.env.MONGO_SERV_EBCA);
 
 var app = express();
 var server = app.listen(process.env.PORT || 3000);
