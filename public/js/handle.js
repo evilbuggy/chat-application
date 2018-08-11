@@ -1,7 +1,7 @@
+if(localStorage.getItem("evilbuggyChatAppHandlName") != null){
+    window.location.href = "/home";
+}
 $(document).ready(function(){
-    if(localStorage.getItem("evilbuggyChatAppHandlName") != null){
-        window.location.href = "/home";
-    }
     $("#btn").click(function(event){
         event.preventDefault();
         var handleName = $("#handleName").val();
