@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Chat Room: <%= room.name %></title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Sunflower:300,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
+        <link type="text/css" href="./../public/css/room.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="roomName" style="display:none"><%= room.name %></div>
+        <div id="wrapper">
+            
+            <div id="chatWindow">
+                <div id="messages">
+                    <% var from = "" %>
+                    <% for(var i = 0; i < room.messages.length; i++){ %>
+                        <% if(room.messages[i].from == from){ %>
+                            <div class="msg"><%= room.messages[i].content %></div>
+                        <% }else{ %>
+                            <% from = room.messages[i].from %>
+                            <div class="msgFrom"><%= room.messages[i].from %>:</div>
+                            <div class="msg"><%= room.messages[i].content %></div>
+                        <% } %>
+                    <% } %>
+                </div>
+
+                <div id="msgFromName" style="display:none"><%= from %></div>
+
+                <form id="sendMessage">
+                    <input type="text" id="message" placeholder="Message" autocomplete="off" required>
+                    <button id="btn" type="submit">Send</button>
+                </form>
+            </div>
+
+            <div id="footer">
+                <div id="footNav">
+                    <a href="http://www.evilbuggy.com/">About Me</a>
+                    <a href="https://github.com/evilbuggy/youtube">Github Repository</a>
+                </div>
+                <div id="copyrights">
+                    Created by <a href="http://www.evilbuggy.com/">EvilBuggy</a>
+                </div>
+            </div>
+        </div>
+        <script src="/public/js/room.js"></script>
+    </body>
+</html>

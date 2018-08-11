@@ -1,0 +1,145 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    background:linear-gradient(to bottom right, #CFF09E  , #0B486B);
+    height: 100%;
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+#home{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    opacity: 0.6;
+}
+
+#heading {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+#roomContainer{
+    padding-top: 50px;
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+#roomList{
+    list-style-type:  none;
+    width: 25%;
+}
+
+.room{
+    height: 40px;
+    line-height: 40px;
+    font-size:30px;
+    font-family: 'Fjalla One', sans-serif;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.roomLink{
+    text-decoration: none;
+    color: black;
+}
+
+#footer{
+    height: 50px;
+    position:absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+#footNav, #copyrights{
+    height: 100%;
+}
+
+#footer a{
+    text-decoration: none;
+    color: #F6F6F6;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 50px;
+    transition: 0.3s
+}
+
+#copyrights{
+    color: #F6F6F6;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 50px;
+    margin-right: 20px;
+}
+
+#copyrights a{
+    margin: 0px;
+    font-size: 23px;
+}
+
+
+@media only screen and (max-width: 1280px) {
+    #heading{
+        font-size: 65px;
+    }
+    .btn{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    #footer{
+        height : 35px;
+    }
+    #footer a{
+        line-height : 35px;
+    }
+    #copyrights a{
+        font-size: 18px;
+    }
+    #copyrights{
+        line-height: 35px;
+    }
+}
+
+
+@media only screen and (max-height: 800px){
+    #header{
+        padding-top : 250px;
+    }
+}
+
+
+@media only screen and (max-height: 700px){
+    #header{
+        padding-top : 160px;
+    }
+}

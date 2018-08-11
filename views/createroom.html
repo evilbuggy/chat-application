@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create room</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
+        <link type="text/css" href="./../public/css/createroom.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <a id="home" href="/">Back to home</a>
+            <div id="header">
+                <h1 id="heading">Create Room</h1>
+                <h3 id="error"></h3>
+            </div>
+            <form id="form">
+                <input type="text" id="roomName" placeholder="Room name" autocomplete="off" required>
+                <button id="btn" type="submit">Create room</button>
+            </form>
+            <div id="footer">
+                <div id="footNav">
+                    <a href="http://www.evilbuggy.com/">About Me</a>
+                    <a href="https://github.com/evilbuggy/youtube">Github Repository</a>
+                </div>
+                <div id="copyrights">
+                    Created by <a href="http://www.evilbuggy.com/">EvilBuggy</a>
+                </div>
+            </div>
+            <script src="/public/js/createroom.js"></script>
+        </div>
+        <script>
+            if(localStorage.getItem("evilbuggyChatAppHandlName") == null){
+                window.location.href = "/";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Join room</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
+        <link type="text/css" href="./../public/css/joinroom.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <a id="home" href="/">Back to home</a>
+            <h1 id="heading">Join room</h1>
+            <div id="roomContainer">
+                <ul id="roomList">
+                <% for(var i = 0; i < rooms.length; i++){ %>
+                    <a class="roomLink" href="/<%= rooms[i].name %>">
+                        <li class="room">
+                            <%= rooms[i].name %>
+                        </li>
+                        </a>
+                <% } %>
+                </ul>
+            </div>
+            <div id="footer">
+                <div id="footNav">
+                    <a href="http://www.evilbuggy.com/">About Me</a>
+                    <a href="https://github.com/evilbuggy/youtube">Github Repository</a>
+                </div>
+                <div id="copyrights">
+                    Created by <a href="http://www.evilbuggy.com/">EvilBuggy</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            if(localStorage.getItem("evilbuggyChatAppHandlName") == null){
+                window.location.href = "/";
+            }
+        </script>
+    </body>
+</html>

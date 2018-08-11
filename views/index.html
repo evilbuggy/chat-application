@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat App</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
+        <link type="text/css" href="./../public/css/index.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <h1 id="heading">Chat App</h1>
+            </div>
+            <div id="form">
+                <button class="btn" type="button"><a href="/createroom">Create New Room</a></button>
+                <button class="btn" type="button"><a href="/joinroom">Join Existing Room</a></button>
+            </div>
+            <div id="footer">
+                <div id="footNav">
+                    <a href="http://www.evilbuggy.com/">About Me</a>
+                    <a href="https://github.com/evilbuggy/youtube">Github Repository</a>
+                </div>
+                <div id="copyrights">
+                    Created by <a href="http://www.evilbuggy.com/">EvilBuggy</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            if(localStorage.getItem("evilbuggyChatAppHandlName") == null){
+                window.location.href = "/";
+            }
+        </script>
+    </body>
+</html>
